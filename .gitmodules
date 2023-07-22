@@ -1,0 +1,9 @@
+[submodule "refund-hook-contracts/lib/forge-std"]
+	path = refund-hook-contracts/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "refund-hook-contracts/lib/safe-core-protocol"]
+	path = refund-hook-contracts/lib/safe-core-protocol
+	url = https://github.com/5afe/safe-core-protocol
+[submodule "refund-hook-contracts/lib/openzeppelin-contracts"]
+	path = refund-hook-contracts/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
