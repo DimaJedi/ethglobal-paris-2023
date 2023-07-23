@@ -1,15 +1,15 @@
 "use client";
 import styles from "./page.module.css";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Safe from "@/components/Safe";
+import Safes from "@/components/Safes";
+import Trade from "@/components/Trade";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
         <ConnectButton />
-        <Safe />
-      </div>
+        <Safes />
+        <Trade />
     </main>
   );
 }

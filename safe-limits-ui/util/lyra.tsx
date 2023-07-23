@@ -11,6 +11,7 @@ import { getExpirationTerm } from "./intex";
 import { CHAINS, UNIT, ZERO_BN } from "./constants";
 import { arbitrumProvider, optimismProvider } from "./providers";
 import fromBigNumber from "./fromBigNumber";
+import useSWR from "swr";
 import {
   ActivePosition,
   Instrument,
@@ -44,10 +45,8 @@ const parsePrice = (quote: Quote) =>
 const useLyraMarket = (chain: CHAINS) => {
   // const { underlying } = useAppContext();
   const underlying = "ETH";
-  const { data: market } = useQuery(
-    ["lyra-markets", underlying, chain],
-    () => chainLyraInstances[chain].market(underlying).catch(console.error),
-    { staleTime: Infinity, retryDelay: 10000, retry: 1 },
+  const { data: market } = useSWR(["lyra-markets", underlying, chain], () =>
+    chainLyraInstances[chain].market(underlying).catch(console.error),
   );
 
   return [market];

@@ -1,0 +1,13 @@
+[{
+  "inputs": [
+    {
+      "internalType": "address",
+      "name": "integration",
+      "type": "address"
+    }
+  ],
+  "name": "setHooks",
+  "outputs": [],
+  "stateMutability": "nonpayable",
+  "type": "function"
+}]
